@@ -18,7 +18,7 @@ import type { FundRecord, FundsApiResponse, ThemeCategory } from "@/lib/types"
 const defaultToolbar: FundToolbarState = {
   query: "",
   regions: ["us"],
-  themes: ["nasdaq100"],
+  themes: [],
   status: "open",
   limit: "all",
 }

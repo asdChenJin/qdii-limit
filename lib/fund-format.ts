@@ -24,7 +24,7 @@ export function normalizeSubscribeStatus(
   minAmount: number | null,
 ): "开放申购" | "暂停申购" {
   if (rawStatus.includes("暂停")) return "暂停申购"
-  if (maxAmount == null) return rawStatus === "开放申购" ? "开放申购" : "暂停申购"
+  if (maxAmount == null) return rawStatus === "开放申购" || rawStatus === "限大额" ? "开放申购" : "暂停申购"
   if (maxAmount === 0) return "暂停申购"
   if (minAmount != null && maxAmount < minAmount) return "暂停申购"
   return "开放申购"
